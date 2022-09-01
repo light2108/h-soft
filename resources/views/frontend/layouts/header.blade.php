@@ -38,43 +38,47 @@ $news = News::orderBy('id', 'desc')->paginate(3);
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                                     <div class="dropdown-item">
                                         @foreach ($news as $new)
-                                        <div class="new-{{$new['id']}}">
-                                            <a href="javascript:void(0)" class="cart-items-{{$new['id']}}" @if(in_array(Auth::user()->id, explode(",",$new['user_id']))) style="opacity: 0.7" @endif>
-                                                <div class="row">
-                                                    <div class="col-6 text-left">
+                                            <div class="new-{{ $new['id'] }}">
+                                                <a href="javascript:void(0)" class="cart-items-{{ $new['id'] }}"
+                                                    @if (in_array(Auth::user()->id, explode(',', $new['user_id']))) style="opacity: 0.7" @endif>
+                                                    <div class="row">
+                                                        <div class="col-6 text-left">
 
 
-                                                        <img src="frontend/img/h-soft2.png" alt="" />
-                                                        <span style="font-weight:800; position:relative; top:-5px;">Tin
-                                                            tức
-                                                            mới</span>
-                                                        <br>
-                                                        <span style="position:relative; top:-20px; padding-left:40px">
-                                                            <label>{{ date('H:i-d/m/Y', strtotime($new['created_at'])) }}</label>
-                                                        </span>
+                                                            <img src="frontend/img/h-soft2.png" alt="" />
+                                                            <span
+                                                                style="font-weight:800; position:relative; top:-5px;">Tin
+                                                                tức
+                                                                mới</span>
+                                                            <br>
+                                                            <span
+                                                                style="position:relative; top:-20px; padding-left:40px">
+                                                                <label>{{ date('H:i-d/m/Y', strtotime($new['created_at'])) }}</label>
+                                                            </span>
+                                                        </div>
+                                                        @if (!in_array(Auth::user()->id, explode(',', $new['user_id'])))
+                                                            <div class="col-6 text-right img-point-{{ $new['id'] }}">
+                                                                <img src="frontend/img/point.png" alt="" />
+
+                                                            </div>
+                                                        @endif
                                                     </div>
-                                                    @if(!in_array(Auth::user()->id, explode(",",$new['user_id'])))
-                                                    <div class="col-6 text-right img-point-{{$new['id']}}">
-                                                        <img src="frontend/img/point.png" alt="" />
-
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <a href="{{ url('/detail/new/' . $new['id']) }}"
+                                                                data-id="{{ $new['id'] }}" class="image-new">
+                                                                <img src="{{ $new['image'] }}"
+                                                                    style="width:100%; height: 150px" alt="" />
+                                                            </a>
+                                                            <h6 style="margin-top:10px; font-size:14px;">
+                                                                {{ $new['name'] }}
+                                                            </h6>
+                                                        </div>
                                                     </div>
-                                                    @endif
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <a href="{{ url('/detail/new/' . $new['id']) }}" data-id="{{$new['id']}}" class="image-new">
-                                                            <img src="{{ $new['image'] }}"
-                                                                style="width:100%; height: 150px" alt="" />
-                                                        </a>
-                                                        <h6 style="margin-top:10px; font-size:14px;">
-                                                            {{$new['name']}}
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                                <hr>
+                                                    <hr>
 
-                                            </a>
-                                        </div>
+                                                </a>
+                                            </div>
                                         @endforeach
                                         {{-- <a href="javascript:void(0)" class="cart-items" style="opacity: 0.7">
                                             <div class="row">
@@ -99,7 +103,7 @@ $news = News::orderBy('id', 'desc')->paginate(3);
                                         </a> --}}
                                         <hr>
                                         {{-- @endforeach --}}
-                                        <center><a href="{{url('/dashboard/news')}}" style="font-size: 30px;"><i
+                                        <center><a href="{{ url('/dashboard/news') }}" style="font-size: 30px;"><i
                                                     class="fa fa-angle-double-down"></i></a></center>
                                     </div>
 
@@ -132,7 +136,7 @@ $news = News::orderBy('id', 'desc')->paginate(3);
             <div class="row">
                 <div class="col-lg-3 col-md-3 d-none d-lg-block">
                     <div class="categories-menu text-center text-uppercase click bg-7">
-                        <a href="{{ url('/dashboard') }}"
+                        <a href="{{ url('/') }}"
                             @if (Session::get('page') == 'dashboard') style="
                             text-decoration: underline;" @endif>TRANG
                             CHỦ</a>

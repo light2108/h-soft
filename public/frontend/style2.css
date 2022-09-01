@@ -1,0 +1,28 @@
+@media (max-width: 1000px) {
+    .aboutus .services {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .aboutus .services .service {
+        margin-top: 20px;
+    }
+}
+
+
+
+@media only screen and (max-width: 752px) {
+    .large {
+        display: none;
+    }
+
+    .num {
+        margin-top: 0px;
+
+    }
+
+    .rate {
+        align-items: center;
+        text-align: center;
+    }
+}

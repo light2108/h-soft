@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="frontend/css/percircle.css">
     <!-- Theme main style -->
     <link rel="stylesheet" href="frontend/style.css">
+    <link rel="stylesheet" href="frontend/style2.css">
     <!-- Responsive css -->
     <link rel="stylesheet" href="frontend/css/responsive.css">
     <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css" media="all"
@@ -122,8 +123,8 @@
                                     <button type="submit" class="btn btn-info btn-block btn-round btn-grad">Đăng
                                         ký</button>
                                 </form>
-                                <div class="text-center title-login">Đã có tài khoản ? <a href="#" style="color:blue"
-                                        data-toggle="modal" data-target="#exampleModalCenterLogin"
+                                <div class="text-center title-login">Đã có tài khoản ? <a href="#"
+                                        style="color:blue" data-toggle="modal" data-target="#exampleModalCenterLogin"
                                         data-dismiss="modal">Đăng nhập</a></div>
                             </div>
 
@@ -178,9 +179,10 @@
                                         style="background-color: #3356AF">Đăng nhập</button>
                                 </form>
                                 <br>
-                                <div class="text-center title-login">Chưa có tài khoản ? <a href="#" style="color:blue"
-                                        data-toggle="modal" data-target="#exampleModalCenterRegister"
-                                        data-dismiss="modal">Đăng ký</a></div>
+                                <div class="text-center title-login">Chưa có tài khoản ? <a href="#"
+                                        style="color:blue" data-toggle="modal"
+                                        data-target="#exampleModalCenterRegister" data-dismiss="modal">Đăng ký</a>
+                                </div>
                             </div>
 
                         </div>
@@ -260,8 +262,7 @@
                                                 <div id="otp"
                                                     class="inputs d-flex flex-row justify-content-center mt-2 container">
 
-                                                     <input
-                                                        class="m-2 text-center form-control rounded" type="text"
+                                                    <input class="m-2 text-center form-control rounded" type="text"
                                                         id="first" /> <input
                                                         class="m-2 text-center form-control rounded" type="text"
                                                         id="second" /> <input
@@ -270,7 +271,8 @@
                                                         class="m-2 text-center form-control rounded" type="text"
                                                         id="fourth" /> <input
                                                         class="m-2 text-center form-control rounded" type="text"
-                                                        id="fifth" /> </div>
+                                                        id="fifth" />
+                                                </div>
                                                 <div id="remember_phone"></div>
 
                                             </div>
@@ -284,7 +286,7 @@
                             <div class="mt-3">
                                 <span class="d-block mobile-text" id="countdown"></span>
                                 <span class="d-block mobile-text" id="resend"></span>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -436,7 +438,6 @@
         $(".js-example-tags").select2({
             // tags: true
         });
-
     </script>
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script> --}}
 </body>

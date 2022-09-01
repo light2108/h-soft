@@ -44,8 +44,8 @@ use App\Models\User; ?>
                                         <i class="fa-solid fa-star" style="color: #d6d4d4"></i>
                                     </div>
                                     <div class="col-6">
-                                        <p style="font-size:16px; right:20%; position: relative;top:1px; font-weight:600">
-                                            <span>4.0/5</span> ({{$count_comments}} đánh giá)
+                                        <p style="font-size:16px; right:20%; position: absolute;top:1px; font-weight:600">
+                                            <span>4.0/5</span> ({{ $count_comments }} đánh giá)
                                         </p>
                                     </div>
                                 </div>
@@ -99,14 +99,16 @@ use App\Models\User; ?>
                                 <div class="product-items container">
                                     <div class="row">
                                         <div class="col-3">
-                                            <img class="user_image" @if(!empty(User::find($cmt['user_id'])->image)) src="{{ User::find($cmt['user_id'])->image }}" @else src="frontend/img/avatar.jpeg" @endif />
+                                            <img class="user_image"
+                                                @if (!empty(User::find($cmt['user_id'])->image)) src="{{ User::find($cmt['user_id'])->image }}" @else src="frontend/img/avatar.jpeg" @endif />
                                         </div>
                                         <div class="col-5">
                                             <span
                                                 style="position: relative; right:32%;top:3px;font-weight:600; font-size:16px">{{ User::find($cmt['user_id'])->name }}</span>
                                             <div style="position: relative; right:32%;bottom:1px;">
-                                                @for($i=0; $i<5; ++$i)
-                                                    <i @if($cmt['rating']==$i+0.5) class="fa-solid fa-star-half" style="color: rgb(241, 241, 8)" @elseif($i>=$cmt['rating']) class="fa-solid fa-star" style="color: #d6d4d4" @else class="fa-solid fa-star" style="color: rgb(241, 241, 8)" @endif></i>
+                                                @for ($i = 0; $i < 5; ++$i)
+                                                    <i
+                                                        @if ($cmt['rating'] == $i + 0.5) class="fa-solid fa-star-half" style="color: rgb(241, 241, 8)" @elseif($i >= $cmt['rating']) class="fa-solid fa-star" style="color: #d6d4d4" @else class="fa-solid fa-star" style="color: rgb(241, 241, 8)" @endif></i>
                                                 @endfor
                                             </div>
                                         </div>
@@ -124,8 +126,9 @@ use App\Models\User; ?>
                                 <hr>
                             @endforeach
                         </div>
-                        <center><button class="btn btn-info btn-block btn-round btn-grad" style="width: 250px" type="button"
-                                data-toggle="modal" data-target="#exampleModalCenterComment" data-dismiss="modal">Viết đánh
+                        <center><button class="btn btn-info btn-block btn-round btn-grad" style="width: 250px"
+                                type="button" data-toggle="modal" data-target="#exampleModalCenterComment"
+                                data-dismiss="modal">Viết đánh
                                 giá</button></center>
 
                         <div class="middle-product">
@@ -150,65 +153,74 @@ use App\Models\User; ?>
                         @csrf
                         <input type="hidden" name="project_id" value="{{ $project['id'] }}">
                         <div class="container">
-                        <div class="row">
-                            <div class="col-1">
+                            <div class="row">
 
-                            </div>
-                            <div class="col-2">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <img src="frontend/img/circle.png" style="max-height:80px; max-width:80px" alt="">
+                                <div class="col col-lg-2">
+                                    <div style="position: relative, display: block">
+                                        <img src="frontend/img/circle.png"
+                                            style="position:relative;max-height:80px; max-width:80px; margin-left: 30px"
+                                            alt="">
+
+                                        <h5
+                                            style="font-family: 'Times New Roman', Times, serif; position: absolute; display: flex;top: 30px; margin-left: 52px; text-align: center">
+                                            4.0/5</h5>
                                     </div>
-                                    <div class="col-6">
-                                        <h5 style="font-family: 'Times New Roman', Times, serif; position: relative;right:130%;top:30%;float:left">4.0/5</h5>
+
+                                </div>
+                                <div class="col-3">
+                                    <div class="num">
+                                        <div style="margin-left: 20px">
+                                            <h6
+                                                style="margin-top:30px; top:110%; font-family:'Times New Roman', Times, serif; align-items:center;">
+                                                {{ $count_comments }} đánh giá</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="large">
+                                    <div class="col-1" style="border-left: 2px solid gray;height: 100px;">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h6
-                                    style="position: relative; top:110%; font-family:'Times New Roman', Times, serif">
-                                    {{$count_comments}} đánh giá</h6>
-                                    </div>
-                                </div>
 
-                            </div>
-                            <div class="col-1" style="border-left: 2px solid gray;height: 100px;">
 
-                            </div>
-                            <div class="col-5">
-                                <h6>Mức độ đánh giá của bạn</h6>
-                                <div style="font-size: 35px; position: relative;right:15%">
-                                    {{-- <input type="hidden" value="" --}}
-                                    <input id="input-id" type="hidden" name="rating" class="rating" data-size="lg">
-                                    {{-- <div class="container">
+                                <div class="col col-xs-12">
+                                    <div class="rate">
+                                        <h6>Mức độ đánh giá của bạn</h6>
+                                        <div style="display:flex ;font-size: 35px">
+                                            {{-- <input type="hidden" value="" --}}
+                                            <input id="input-id" type="hidden" name="rating" class="rating"
+                                                data-size="lg">
+                                            {{-- <div class="container">
                                     <span id="rateMe2" class="empty-stars"></span>
                                   </div> --}}
-                                    {{-- @for ($i = 1; $i <= 5; ++$i)
+                                            {{-- @for ($i = 1; $i <= 5; ++$i)
                                 <i class="fa-solid fa-star star-{{$i}}" style="color: #d6d4d4"></i>&nbsp;
                             @endfor --}}
 
 
+                                        </div>
+
+                                    </div>
+
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-label-group">
-                                    <textarea name="content" rows="5" required class="form-control"
-                                        placeholder="Vui lòng nhập"></textarea>
-                                    <label>Nội dung đánh giá</label>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-label-group">
+                                        <textarea name="content" rows="5" required class="form-control" placeholder="Vui lòng nhập"></textarea>
+                                        <label>Nội dung đánh giá</label>
+                                    </div>
+                                    <center><button type="submit" style="width: 80%"
+                                            class="btn btn-info btn-block btn-round btn-grad">Gửi đánh giá</button>
+                                    </center>
                                 </div>
-                                <center><button type="submit" style="width: 80%"
-                                        class="btn btn-info btn-block btn-round btn-grad">Gửi đánh giá</button></center>
                             </div>
-                        </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
 @endsection
