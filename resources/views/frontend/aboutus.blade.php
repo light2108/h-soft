@@ -11,36 +11,37 @@
                         </div>
                         <div class="product-title text-center">
                             <img src="frontend/img/h-soft.png" alt="" /><br><br>
-                            <i class='fa-regular fa-circle-c'></i><label>&nbsp;H-App Version 1.0.0</label>
+                            <i class='fa-regular fa-circle-c'></i><label style="font-family: Lexend">&#169; H-APP Version
+                                1.0.0</label>
                         </div>
                         <hr>
                         <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the
-                                    1500s, when an unknown printer took a galley of type and scrambled it to
-                                    make a type specimen book. It has survived not only five centuries, but also
-                                    the leap into electronic typesetting, remaining essentially unchanged
-                                </p>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the
-                                    1500s, when an unknown printer took a galley of type and scrambled it to
-                                    make a type specimen book. It has survived not only five centuries, but also
-                                    the leap into electronic typesetting, remaining essentially unchanged
-                                </p>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the
-                                    1500s, when an unknown printer took a galley of type and scrambled it to
-                                    make a type specimen book. It has survived not only five centuries, but also
-                                    the leap into electronic typesetting, remaining essentially unchanged
-                                </p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the
+                                        1500s, when an unknown printer took a galley of type and scrambled it to
+                                        make a type specimen book. It has survived not only five centuries, but also
+                                        the leap into electronic typesetting, remaining essentially unchanged
+                                    </p>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the
+                                        1500s, when an unknown printer took a galley of type and scrambled it to
+                                        make a type specimen book. It has survived not only five centuries, but also
+                                        the leap into electronic typesetting, remaining essentially unchanged
+                                    </p>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the
+                                        1500s, when an unknown printer took a galley of type and scrambled it to
+                                        make a type specimen book. It has survived not only five centuries, but also
+                                        the leap into electronic typesetting, remaining essentially unchanged
+                                    </p>
 
+                                </div>
                             </div>
-                        </div>
                         </div>
 
                     </div>
@@ -49,6 +50,4 @@
             </div>
         </div>
     </div>
-
-
 @endsection
