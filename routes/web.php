@@ -45,7 +45,7 @@ Route::prefix('admin')->namespace('Backend')->group(function () {
 });
 Route::namespace('Frontend')->group(function () {
   Route::get('/', 'HSoftController@dashboard');
-
+  Route::get('/a', 'HSoftController@dashboard');
   ///////////////////
 
   Route::post('/dashboard/register', 'UserController@register');

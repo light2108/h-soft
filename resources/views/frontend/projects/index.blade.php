@@ -13,7 +13,8 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
                         <a href="#">
-                            <img src="frontend/img/app-mobile.png" alt=""><strong class="title">App Mobile</strong>
+                            <img src="frontend/img/app-mobile.png" alt=""><strong class="title">App
+                                Mobile</strong>
                         </a>
                     </div>
                 </div>
@@ -27,10 +28,12 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-banner mrg-top-md">
                         <a href="#">
-                            <img src="frontend/img/theo-yeu-cau.png" alt=""><strong class="title">Theo yêu cầu</strong>
+                            <img src="frontend/img/theo-yeu-cau.png" alt=""><strong class="title">Theo yêu
+                                cầu</strong>
                         </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -117,8 +120,8 @@
                                                         value="{{ $projects[$i]['id'] }}">
                                                     <div class="form-label-group">
 
-                                                        <input type="text" class="form-control" placeholder="Vui lòng nhập"
-                                                            name="name" required>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Vui lòng nhập" name="name" required>
                                                         <label>Tên của bạn</label>
                                                     </div>
                                                     <div class="form-label-group">
@@ -129,14 +132,14 @@
                                                     </div>
                                                     <div class="form-label-group">
 
-                                                        <input type="email" class="form-control" placeholder="Vui lòng nhập"
-                                                            name="email" required>
+                                                        <input type="email" class="form-control"
+                                                            placeholder="Vui lòng nhập" name="email" required>
                                                         <label>Email</label>
                                                     </div>
                                                     <div class="form-label-group">
 
-                                                        <input type="text" class="form-control" placeholder="Vui lòng nhập"
-                                                            name="address" required>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Vui lòng nhập" name="address" required>
                                                         <label>Địa chỉ</label>
                                                     </div>
                                                     <div class="form-label-group">
@@ -163,8 +166,7 @@
                                                     </div>
                                                     <div class="form-label-group">
 
-                                                        <textarea name="description" required class="form-control"
-                                                            placeholder="Vui lòng nhập"></textarea>
+                                                        <textarea name="description" required class="form-control" placeholder="Vui lòng nhập"></textarea>
                                                         <label>Nội dung dự án muốn làm</label>
                                                     </div>
                                                     <button type="submit"
@@ -180,8 +182,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="exampleModalCenterContact-{{ $i + 1 }}" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal fade" id="exampleModalCenterContact-{{ $i + 1 }}" tabindex="-1"
+                        role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header" style="background-color: #3356AF">
@@ -203,8 +205,8 @@
                                                         value="{{ $projects[$i + 1]['id'] }}">
                                                     <div class="form-label-group">
 
-                                                        <input type="text" class="form-control" placeholder="Vui lòng nhập"
-                                                            name="name" required>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Vui lòng nhập" name="name" required>
                                                         <label>Tên của bạn</label>
                                                     </div>
                                                     <div class="form-label-group">
@@ -215,14 +217,14 @@
                                                     </div>
                                                     <div class="form-label-group">
 
-                                                        <input type="email" class="form-control" placeholder="Vui lòng nhập"
-                                                            name="email" required>
+                                                        <input type="email" class="form-control"
+                                                            placeholder="Vui lòng nhập" name="email" required>
                                                         <label>Email</label>
                                                     </div>
                                                     <div class="form-label-group">
 
-                                                        <input type="text" class="form-control" placeholder="Vui lòng nhập"
-                                                            name="address" required>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Vui lòng nhập" name="address" required>
                                                         <label>Địa chỉ</label>
                                                     </div>
                                                     <div class="form-label-group">
@@ -249,8 +251,7 @@
                                                     </div>
                                                     <div class="form-label-group">
 
-                                                        <textarea name="description" required class="form-control"
-                                                            placeholder="Vui lòng nhập"></textarea>
+                                                        <textarea name="description" required class="form-control" placeholder="Vui lòng nhập"></textarea>
                                                         <label>Nội dung dự án muốn làm</label>
                                                     </div>
                                                     <button type="submit"
@@ -271,6 +272,4 @@
             </div>
         </div>
     </div>
-
-
 @endsection

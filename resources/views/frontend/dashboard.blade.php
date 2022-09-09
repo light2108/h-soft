@@ -1,6 +1,6 @@
 @extends('frontend.index')
 @section('content')
-    <div class="banner-area ptb-35">
+    <div class="banner-header">
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
@@ -27,7 +27,8 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                     <div class="single-banner mrg-top-md">
                         <a href="#">
-                            <img src="frontend/img/theo-yeu-cau.png" alt=""><strong class="title">Theo yêu cầu</strong>
+                            <img src="frontend/img/theo-yeu-cau.png" alt=""><strong class="title">Theo yêu
+                                cầu</strong>
                         </a>
                     </div>
                 </div>
@@ -254,7 +255,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             @endfor
 
                         </div>
@@ -286,14 +286,14 @@
                                         <input type="hidden" name="project_id" value="{{ $projects[$i]['id'] }}">
                                         <div class="form-label-group">
 
-                                            <input type="text" class="form-control" placeholder="Vui lòng nhập" name="name"
-                                                required>
+                                            <input type="text" class="form-control" placeholder="Vui lòng nhập"
+                                                name="name" required>
                                             <label>Tên của bạn</label>
                                         </div>
                                         <div class="form-label-group">
 
-                                            <input type="number" min="0" class="form-control" placeholder="Vui lòng nhập"
-                                                name="phone" required>
+                                            <input type="number" min="0" class="form-control"
+                                                placeholder="Vui lòng nhập" name="phone" required>
                                             <label>Số điện thoại</label>
                                         </div>
                                         <div class="form-label-group">
@@ -319,8 +319,8 @@
 
                                             <div class="input-group">
 
-                                                <input min="0" type="number" name="price" class="form-control input-lg"
-                                                    required placeholder="Vui lòng nhập" />
+                                                <input min="0" type="number" name="price"
+                                                    class="form-control input-lg" required placeholder="Vui lòng nhập" />
                                                 <label>Giá mong muốn</label>
                                                 <div class="input-group-append">
                                                     <span class="input-group-text"
@@ -331,8 +331,7 @@
                                         </div>
                                         <div class="form-label-group">
 
-                                            <textarea name="description" required class="form-control"
-                                                placeholder="Vui lòng nhập"></textarea>
+                                            <textarea name="description" required class="form-control" placeholder="Vui lòng nhập"></textarea>
                                             <label>Nội dung dự án muốn làm</label>
                                         </div>
                                         <button type="submit" class="btn btn-info btn-block btn-round btn-grad">Gửi
@@ -366,17 +365,17 @@
                                 <div class="d-flex flex-column text-center">
                                     <form action="{{ url('/dashboard/contact') }}" method="POST">
                                         @csrf
-                                        <input type="hidden" name="project_id" value="{{ $projects[$i+1]['id'] }}">
+                                        <input type="hidden" name="project_id" value="{{ $projects[$i + 1]['id'] }}">
                                         <div class="form-label-group">
 
-                                            <input type="text" class="form-control" placeholder="Vui lòng nhập" name="name"
-                                                required>
+                                            <input type="text" class="form-control" placeholder="Vui lòng nhập"
+                                                name="name" required>
                                             <label>Tên của bạn</label>
                                         </div>
                                         <div class="form-label-group">
 
-                                            <input type="number" min="0" class="form-control" placeholder="Vui lòng nhập"
-                                                name="phone" required>
+                                            <input type="number" min="0" class="form-control"
+                                                placeholder="Vui lòng nhập" name="phone" required>
                                             <label>Số điện thoại</label>
                                         </div>
                                         <div class="form-label-group">
@@ -402,8 +401,8 @@
 
                                             <div class="input-group">
 
-                                                <input min="0" type="number" name="price" class="form-control input-lg"
-                                                    required placeholder="Vui lòng nhập" />
+                                                <input min="0" type="number" name="price"
+                                                    class="form-control input-lg" required placeholder="Vui lòng nhập" />
                                                 <label>Giá mong muốn</label>
                                                 <div class="input-group-append">
                                                     <span class="input-group-text"
@@ -414,8 +413,7 @@
                                         </div>
                                         <div class="form-label-group">
 
-                                            <textarea name="description" required class="form-control"
-                                                placeholder="Vui lòng nhập"></textarea>
+                                            <textarea name="description" required class="form-control" placeholder="Vui lòng nhập"></textarea>
                                             <label>Nội dung dự án muốn làm</label>
                                         </div>
                                         <button type="submit" class="btn btn-info btn-block btn-round btn-grad">Gửi
@@ -446,8 +444,9 @@
                                     </div>
                                     <div class="product-wrapper product-new bb bl">
                                         <div class="product-img">
-                                            <a href="{{url('/detail/new/'.$news[$i]['id'])}}">
-                                                <img src="{{ $news[$i]['image'] }}" style="height: 200px;width:100%" alt="" />
+                                            <a href="{{ url('/detail/new/' . $news[$i]['id']) }}">
+                                                <img src="{{ $news[$i]['image'] }}" style="height: 200px;width:100%"
+                                                    alt="" />
                                             </a>
                                         </div>
                                         <div class="new-content">
@@ -460,8 +459,9 @@
                                     </div>
                                     <div class="product-wrapper product-new bb bl">
                                         <div class="product-img">
-                                            <a href="{{url('/detail/new/'.$news[$i+1]['id'])}}">
-                                                <img src="{{ $news[$i + 1]['image'] }}" style="height: 200px;width:100%" alt="" />
+                                            <a href="{{ url('/detail/new/' . $news[$i + 1]['id']) }}">
+                                                <img src="{{ $news[$i + 1]['image'] }}" style="height: 200px;width:100%"
+                                                    alt="" />
                                             </a>
                                         </div>
                                         <div class="new-content">

@@ -56,9 +56,9 @@
 }
 
 .content-new span {
-    left:-10px;
-    display:block;
-    height:62px;
+    left: -10px;
+    display: block;
+    height: 62px;
     font-size: 12px;
     font-weight: 800;
 }
@@ -123,15 +123,17 @@
     float: right;
     color: blue;
 }
-.detail-product .container p{
-    font-weight:400;
-    font-size:16px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+.detail-product .container p {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
-.detailproduct .nameproduct .col-3{
-    position:relative;
-    bottom:12px;
-    right:20px;
+
+.detailproduct .nameproduct .col-3 {
+    position: relative;
+    bottom: 12px;
+    right: 20px;
 }
 
 .detailproduct .nameproduct .right {
@@ -389,6 +391,7 @@ ul {
 
 .ptb-35 {
     padding: 35px 0px;
+    display: inline-block;
 }
 
 .ptb-25 {
@@ -1244,9 +1247,9 @@ a#scrollUp,
 .user_image {
     width: 40px;
     height: 40px;
-    position:relative;
-    top:5px;
-    left:5px;
+    position: relative;
+    top: 5px;
+    left: 5px;
     border-radius: 50%;
 }
 
@@ -1291,15 +1294,16 @@ a#scrollUp,
 .product-wrapper {
     overflow: hidden;
     margin-left: 10px;
-    margin-right:10px;
-    border:1px solid white;
+    margin-right: 10px;
+    border: 1px solid white;
     border-end-end-radius: 10px;
     border-bottom-left-radius: 10px;
 
 }
-.product-wrapper-new{
+
+.product-wrapper-new {
     overflow: hidden;
-    height:80px;
+    height: 80px;
 }
 
 
@@ -1508,26 +1512,26 @@ a#scrollUp,
 .new-content span {
     display: block;
     font-size: 14px;
-    height:20px;
-    left:5px;
-    position:relative;
+    height: 20px;
+    left: 5px;
+    position: relative;
     font-weight: 700;
 }
 
 .new-content label {
     display: block;
     float: right;
-    position:relative;
+    position: relative;
     color: blue;
-    right:5px;
+    right: 5px;
 }
 
 .new-content p {
     display: block;
     font-size: 14px;
-    margin:5px;
-    height:100px;
-    color:gray;
+    margin: 5px;
+    height: 100px;
+    color: gray;
     font-weight: 200;
 }
 
@@ -1620,9 +1624,10 @@ a#scrollUp,
     left: 20px;
     bottom: 0;
 }
-.product-new{
-    height:360px;
-    border:1px solid black;
+
+.product-new {
+    height: 360px;
+    border: 1px solid black;
 }
 
 .product-new p {

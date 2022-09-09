@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="frontend/css/animate.min.css">
     <!-- Bootstrap fremwork main css -->
     <link rel="stylesheet" href="frontend/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
     {{-- https://cdn.jsdelivr.net/gh/exacti/floating-labels@latest/floating-labels.min.css --}}
     {{-- <link rel="stylesheet" type="text/css"
         href="frontend/dmm.css" media="screen"> --}}
@@ -75,7 +76,7 @@
             </button>
         </div>
     @endif
-    @include('frontend.layouts.header')
+    @include('frontend.layouts.b')
 
     <div class="modal fade" id="exampleModalCenterRegister" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

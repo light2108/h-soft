@@ -11,7 +11,7 @@
                         </div>
                         <div class="product-title text-center">
                             <img src="frontend/img/h-soft.png" alt="" /><br><br>
-                            <i class='fa-regular fa-circle-c'></i><label style="font-family: Lexend">&#169; H-APP Version
+                            <i class='fa-regular fa-circle-c'></i><label>&#169; H-APP Version
                                 1.0.0</label>
                         </div>
                         <hr>

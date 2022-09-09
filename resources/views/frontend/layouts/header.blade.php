@@ -15,7 +15,7 @@ $news = News::orderBy('id', 'desc')->paginate(3);
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-7 col-lg-6 col-md-8 col-12">
+                <div class="col-xl-6 col-lg-6 col-md-8 col-12">
                     <div class="search-box">
                         <form action="#">
                             <input type="text" placeholder="Tìm kiếm..." class="form-control" />
@@ -25,8 +25,8 @@ $news = News::orderBy('id', 'desc')->paginate(3);
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-3 col-md-4 col-12">
-                    {{-- <div class="top-cart"> --}}
+                <div class="col-xl-4 col-lg-3 col-md-4 col-12">
+
                     <div class="cart">
 
                         <div class="dropdown show">
@@ -117,11 +117,15 @@ $news = News::orderBy('id', 'desc')->paginate(3);
                                 <strong class="register-login">{{ Auth::user()->name }}</strong>
                             @else
                                 <i class="fa-regular fa-user-circle user-circle"></i>&nbsp;
-                                <strong class="register-login"><a href="#" data-toggle="modal"
-                                        data-target="#exampleModalCenterRegister"> Đăng Kí</a>/ <a href="#"
-                                        data-toggle="modal" data-target="#exampleModalCenterLogin" data-dismiss="modal">
+                                <strong class="register-login">
+                                    <a href="#" data-toggle="modal" data-target="#exampleModalCenterRegister">
+                                        Đăng kí</a>
+                                    /
+                                    <a href="#" data-toggle="modal" data-target="#exampleModalCenterLogin"
+                                        data-dismiss="modal">
                                         Đăng nhập
-                                    </a></strong>
+                                    </a>
+                                </strong>
                             @endif
                         </div>
 
